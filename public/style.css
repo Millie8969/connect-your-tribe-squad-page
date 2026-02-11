@@ -1,0 +1,12 @@
+:root {
+    /* Sizing */
+    --h1-size: clamp(3.5rem, 3.148rem + 1.502vw, 4.5rem);
+
+    --h2-size: clamp(3rem, 2.648rem + 1.502vw, 4rem);
+
+    --body-size: clamp(1rem, 0.648rem + 1.502vw, 2rem);
+
+    /* Spacing */
+
+    --letter-spacing-standard: 3%;
+}
