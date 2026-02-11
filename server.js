@@ -65,7 +65,7 @@ app.get('/', async function (request, response) {
     
     // Filter eventueel alleen op een bepaalde squad
     // 'filter[squads][squad_id][name]': '1I',
-    // 'filter[squads][squad_id][name]': '1J',
+    'filter[squads][squad_id][name]': '1J',
   }
   const personResponse = await fetch('https://fdnd.directus.app/items/person/?' + new URLSearchParams(params))
 
