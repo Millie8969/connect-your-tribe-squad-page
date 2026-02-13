@@ -9,4 +9,72 @@
     /* Spacing */
 
     --letter-spacing-standard: 3%;
+
+    /* Coloring */
+    --background-color: #1f1f1f;
+    --text-color: #eeff00;
+    --link-hover-color: #48ff00;
+
+    /* Fonts */
+
+    --font-standard: "Runescape";
+    --font-bold: "Runescape Bold";
+}
+
+@font-face {
+    font-family: "RuneScape Bold";
+    src: url("assets/fonts/runescape_bold.ttf");
+}
+
+@font-face {
+    font-family: "Runescape";
+    src: url("assets/fonts/runescape.ttf");
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+header {
+    height: 10%;
+    display: flex;
+    justify-content: center;
+}
+
+.headerImg {
+    width: 10%;
+}
+
+
+
+h1 {
+    font-size: var(--h1-size);
+    font-family: var(--font-bold);
+    color: var(--text-color);
+    text-align: center;
+    justify-content: center;
+}
+
+h2 {
+    font-size: var(--h2-size);
+    font-family: var(--font-bold);
+    color: var(--text-color);
+}
+
+ul {
+    font-family: var(--font-standard);
+    list-style: none;
+}
+
+a {
+    font-family: var(--font-standard);
+    font-size: var(--body-size);
+    text-decoration-line: none;
+    color: var(--text-color);
+}
+
+a:hover {
+    transition: 0.20s;
+    color: var(--link-hover-color);
 }
