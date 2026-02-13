@@ -1,16 +1,22 @@
 {% render 'partials/head.liquid', title: 'SquadScape' %}
 
 <h2>Students</h2>
-<ul class="">
+<ul class="profiles">
   {% for person in persons %}
-    <li>
+    <li class="profileCard">
       <figure class="mugshot">
-      <img src="https://fdnd.directus.app/assets/{{ person.mugshot }}?width=300" alt="Profile picture">
+        <a href="/student/{{ person.id }}">
+          <img src="https://fdnd.directus.app/assets/{{ person.mugshot }}" alt="Profile picture" class="avatar">
+        </a>
       </figure>
 
       <a href="/student/{{ person.id }}" class="profileName">
       {{ person.name }}
       </a>
+      <section class="cardInfo">
+        <section>Github handle: {{ person.github_handle }}<section/>
+        <section>Nickname: {{ person.nickname }}<section/>
+      <section/>
     </li>
   {% endfor %}
 </ul>

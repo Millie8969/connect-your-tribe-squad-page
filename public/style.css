@@ -14,6 +14,7 @@
     --background-color: #1f1f1f;
     --text-color: #eeff00;
     --link-hover-color: #48ff00;
+    --card-background-color: #424242;
 
     /* Fonts */
 
@@ -37,16 +38,35 @@ body {
 }
 
 header {
+    background-image: url("assets/img/cobble.jpg");
     height: 10%;
     display: flex;
     justify-content: center;
 }
 
 .headerImg {
-    width: 10%;
+    filter: brightness(60%);
+    width: 20%;
+    max-width: 155px;
+    max-height: 155px;
+    align-self: center;
+    justify-self: center;
 }
 
+.mugshot {
+    align-self: center;
+    margin: 0px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 
+.avatar {
+    display: flex;
+    width: 80%;
+    height: auto;
+    border-radius: 25px;
+    margin: auto;
+}
 
 h1 {
     font-size: var(--h1-size);
@@ -62,17 +82,49 @@ h2 {
     color: var(--text-color);
 }
 
-ul {
+ul.profiles {
+    padding: 0px;
     font-family: var(--font-standard);
     list-style: none;
+    list-style-position: inside;
+
+    /* Use grid to better display profile cards*/
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr;
+
+    @media (width > 570px) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media (width > 870px) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.profileCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--card-background-color);
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.cardInfo {
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 a {
-    font-family: var(--font-standard);
+    font-family: var(--font-bold);
     font-size: var(--body-size);
     text-decoration-line: none;
     color: var(--text-color);
 }
+
+
 
 a:hover {
     transition: 0.20s;
