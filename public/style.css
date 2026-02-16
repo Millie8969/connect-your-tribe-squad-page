@@ -130,3 +130,8 @@ a:hover {
     transition: 0.20s;
     color: var(--link-hover-color);
 }
+
+li.berichten {
+    font-family: 'RuneScape';
+    font-size: var(--h2-size);
+}
